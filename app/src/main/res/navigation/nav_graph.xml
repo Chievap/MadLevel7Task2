@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/QuestFragment">
+
+    <fragment
+        android:id="@+id/QuestFragment"
+        android:name="com.example.madlevel7task2.ui.QuestFragment"
+        android:label="@string/quest_fragment_label"
+        tools:layout="@layout/fragment_quest" >
+        <action
+            android:id="@+id/action_QuestFragment_to_QuestionsFragment"
+            app:destination="@id/QuestionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/QuestionsFragment"
+        android:name="com.example.madlevel7task2.ui.QuestionsFragment"
+        android:label="fragment_questions"
+        tools:layout="@layout/fragment_questions" >
+        <action
+            android:id="@+id/action_QuestionsFragment_to_QuestFragment"
+            app:destination="@id/QuestFragment" />
+    </fragment>
+</navigation>
